@@ -1,0 +1,154 @@
+/* pages/live/index.wxss */
+
+.main{
+  height: 100vh;
+}
+
+.tab{
+  height: 7vh;
+  display: flex;
+  line-height: 7vh;
+}
+
+.tab view{
+  flex: 1 0 auto;
+  font-size: 14px;
+  color: #333333;
+  text-align: center;
+}
+.tab .active{
+  color: #ff5f19;
+  border-bottom: 1px solid #ff5f19;
+  padding-bottom:1.8vh;
+}
+
+.list{
+  
+  background-color: #fff;
+  height:93vh;
+}
+
+.list .item{
+  display: flex;
+  border-bottom: 1px solid #EDEDED;
+  padding: 0 16px;
+  height:120px;
+  align-items: center;
+}
+
+.list .label{
+  flex: 0 0 auto;
+  padding:10px 0;
+}
+
+.list .content{
+  flex-grow: 1;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list .content image{
+  flex: 0 0 auto;
+ height: 76px;
+  width: 250rpx;
+  padding:20rpx;
+}
+
+.list .content .text{
+  flex-grow: 1;
+  font-size: 14px;
+  width:210rpx;
+}
+.list .content .name{
+  flex-grow: 1;
+  font-size: 16px;
+  
+  font-weight: bold;
+  
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  align-content: center;
+}
+
+.list .content .title{
+  overflow: hidden;
+  text-align: center;
+}
+
+.list .content .spec{
+  font-size: 12px;
+  color: #333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 20px;    
+  max-height: 20px;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.list .content .roomid,.list .content .anchor_name{
+  display: flex;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 20px;    
+  max-height: 20px;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.list .content .roomid text:nth-child(1),.list .content .anchor_name text:nth-child(1){
+  color: #fbb8ac;
+  flex: 1 0 50%;
+}
+
+.list .content .price text:nth-child(2){
+  color: #999999;
+  flex: 1 0 50%;
+  text-align: right;
+}
+ 
+.data-loading {
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #eee;
+  text-align: center;
+  font-size: 14px;
+}
+.container {
+  height:40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+} 
+/** loading.wxss **/
+.loading {
+  width: 100%;
+  position: absolute;
+  /*bottom: 150rpx;*/
+  top:0 vh;
+  justify-content: center;
+  text-align: center;
+}
+ 
+.loading .dot{
+  background-color: rgb(172, 7, 7);
+  display: inline-block;
+  /**圆点大小在这里设置，高宽一致，圆角值为高宽的一半**/
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 8rpx;
+  margin: 0 10rpx;
+  opacity: 0;
+}

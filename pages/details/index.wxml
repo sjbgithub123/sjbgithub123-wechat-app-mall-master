@@ -1,0 +1,150 @@
+<!-- banner -->
+<!--view class="banner">
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" data-src="{{item}}" bindtap="previewImage"></image>
+    </swiper-item>
+  </block>
+</swiper>
+</view-->
+<view>
+  <swiper class="swiper" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" bindchange="bindchange"  circular="{{circular}}" style="height:{{imgheights[current]}}rpx;">
+    <block wx:for="{{hdimg}}" wx:key="{{index}}">
+      <swiper-item >
+        <image src="{{item}}" mode="aspectFit" bindload="imageLoad"  bindtap="previewImage"  data-src="{{item}}"
+        class=".itemimage" style="height:{{imgheights[current]}}rpx;width:{{imgwidth}}rpx;"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<scroll-view scroll-y="true">
+  <view class="detail">
+  <view style="display:inline-block;justify-content:space-between">
+    <text class="title" style="width:75%">{{currentname}}</text>
+    <view>
+    <image bindtap="addLike" style="width:50rpx;height:50rpx;margin-right:20rpx;margin-bottom:15rpx;float:right" src="{{isLike?'../../images/collect1.png':'../../images/collect2.png'}}"></image>
+    <image style="width:80rpx;height:80rpx;float:right" src="/images/share.png"></image>
+    </view>
+    </view>
+    
+    <view class="detail2" style="display:inline-block">
+    <view class="desc">{{desc}}</view>
+    <view style='font-size:14px;display:flex;flex-direction:row'> 
+    <text class="price">￥{{saleprice}}</text>
+  <text style='text-decoration:line-through;'>￥{{price}} </text>
+  </view> </view>
+  </view>
+  <view class="separate">
+  <!-- sku选择
+  <text bindtap="toggleDialog">请选择购买数量</text> -->
+  
+        <view class="row" style="display:flex;flex-direction:row;justify-content:space-between">
+        <!--  <text class="sku-price">￥{{price}}</text>-->
+          <text class="sku-title">库存:{{currentnum}}件</text>
+          <text class="sku-title">销售量:{{salesvolume}}件</text>
+          <text class="sku-title">邮费:{{postage}}元</text>
+          
+         <!--<text class="sku-title">商品编码：1456778788</text>-->  
+        </view>
+      </view>
+       <text class="border-line"></text>
+      <view class="view">
+      <view class="row">
+      <view style="font-size:32rpx;font-family:Microsoft Yahei;font-weight:bold;margin-left:20rpx;">颜色</view>
+<!--scroll-view scroll-x  style=" white-space: nowrap; display: flex" class="choice">
+  <view class="sign-setting-border {{idx==item.Item_id?'selected':''}}{{item.Item_num==0?'empty':''}}" wx:for="{{sizecategory}}" wx:key="" bindtap='selectApply' data-id="{{item.Item_id}}">{{item.color}}</view></scroll-view-->
+   <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex" class="select-top">
+   <view class="flex" hover-class="none">
+            <view class="sign-setting-border {{idx==item.Item_id?'selected':''}}{{item.Item_num==0?'empty':''}}" wx:for="{{sizecategory}}" wx:key="" bindtap='selectApply' data-id="{{item.Item_id}}">
+                {{item.color}}
+            </view></view>
+        </scroll-view>
+  </view>
+  <text class="border-line"></text>
+      <view class="row">
+      <view style="font-size:32rpx;font-family:Microsoft Yahei;font-weight:bold;margin-left:20rpx;">尺码</view>
+       <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex" class="select-top">
+   <view class="flex" hover-class="none">
+          <view class="sign-setting-border {{idx2==item.Item_id?'selected':''}}{{item.Item_num==0?'empty':''}}" wx:for="{{applyList.size}}" wx:key="" bindtap='selectApply2' data-id="{{item.Item_id}}">{{item.Item_Name}}</view></view>
+        </scroll-view>
+<!--view class="choice">
+  <view class="sign-setting-border {{idx2==item.Item_id?'selected':''}}{{item.Item_num==0?'empty':''}}" wx:for="{{applyList.size}}" wx:key="" bindtap='selectApply2' data-id="{{item.Item_id}}">{{item.Item_Name}}</view></view-->
+  </view>
+  </view>
+    <text class="border-line"></text>
+<view class='item2'>
+    <view class='left2'>
+      购买数量:
+    </view>
+<view class="buy-num">
+<!--<text bindtap="decrease">-</text>
+<text>{{num}}</text>-->
+
+ <view class="jian-btn {{buynum<=1?'disabled' : ''}}" catchtap="decrease" data-index="{{index}}">-</view>
+<input type="number" confirm-type='确定' value="{{buynum}}"  bindblur='setNumberInput'  bindconfirm='setNumberInput' data-index="{{index}}"/>
+<!--<text bindtap="increase">+</text>-->
+ <view class="jia-btn {{buynum>=currentnum? 'disabled' : ''}}" catchtap="increase" data-index="{{index}}">+</view>
+
+</view>
+
+</view>
+   <text class="border-line"></text>
+
+<view style="display:flex;flex-direction:row;">
+  <text>发货地</text>
+  <text style="font-family:Microsoft YaHei;font-weight:bold">四川空运北京大仓</text></view>
+  <view class="item3">
+  
+  <navigator url="/pages/order/index" class='item'>
+    <view class='left'>
+      分销
+    </view>
+    <view class='right'>
+      <text>以下为最高返利金额，仅做参考使用</text>
+      <image src='/images/share1.png'></image>
+    </view>
+  </navigator>
+<view class="views" style="display:flex;flex-direction:row;justify-content:space-around">
+<view style="display:flex;flex-direction:column;align-items:center;">
+<view style="display:flex;flex-direction:row;align-items:center;"><text>预估直接返利</text>
+<image bindtap="explain" style="width:40rpx;height:40rpx" src="/images/explain.png"></image>
+</view>
+<text style="color:#ff4422">￥{{firrebateamount}}</text>
+</view>
+<view style="display:flex;flex-direction:column;align-items:center;">
+<view style="display:flex;flex-direction:row;align-items:center"><text>预估间接返利</text>
+<image bindtap="explain2" style="width:40rpx;height:40rpx" src="/images/explain.png"></image></view>
+  <text style="color:#ff4422">￥{{secrebateamount}}</text>
+</view>
+ </view>
+  </view>
+   
+  <view style="display:flex;flex-direction:row;justify-content:space-between;align-content:center;border:1px solid #dedede;margin-top:20rpx">
+  <view style="display:flex;flex-direction:row;float:left;aligh-items:left">
+  <text>服务</text>
+  <image style="width:50rpx;height:50rpx;margin-top:15rpx" src="/images/flashlogistics.png"></image>
+  <text style="font-family:Microsoft YaHei;font-weight:bold">闪电物流</text>
+    <image style="width:50rpx;height:50rpx;margin-top:15rpx" src="/images/guarantee1.png"></image>
+  <text style="font-family:Microsoft YaHei;font-weight:bold">正品保障</text></view>
+  <image bindtap="explain2" style="width:40rpx;height:40rpx;margin-top:20rpx;margin-right:20rpx" src="/images/my_order.png"></image>
+  </view>
+
+  <text>商品评价</text>
+  <text class="text-remark">东西还可以，好评~</text>
+  <view class="separate"></view>
+  <text>商品详情</text>
+  <block wx:for-items="{{detailImg}}" wx:key="name">
+    <image mode="widthFix" class="image_detail" src="{{item}}" />
+  </block>
+  <view class="temp"></view>
+</scroll-view>
+<!-- 底部悬浮栏 -->
+<view class="detail-nav">
+  <image bindtap="toCar" style="width:120rpx;height:80rpx" src="/images/contact.png" />
+  <view class="line_nav"></view>
+  <image bindtap="toCar" style="width:120rpx;height:80rpx" src="/images/mall3.png" />
+   <view class="shop-num">{{shopNum}}</view>
+  <button class="button-green" bindtap="addShopCar" formType="submit">加入购物车</button>
+  <button class="button-red" bindtap="buyNow" formType="submit">立即购买</button>
+</view>

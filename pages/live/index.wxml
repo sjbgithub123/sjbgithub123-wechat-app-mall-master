@@ -1,0 +1,64 @@
+
+<view class='main'>
+  <view class='tab'>
+    <view bindtap='tabFun' data-index="{{1}}">
+      <text class='{{tabIndex==1?"active":""}}'>直播中</text>
+    </view>
+    <view bindtap='tabFun' data-index="2">
+      <text class='{{tabIndex==2?"active":""}}'>未开始</text>
+    </view>
+    <view bindtap='tabFun' data-index="3">
+      <text class='{{tabIndex==3?"active":""}}'>已结束</text>
+    </view>
+    <view bindtap='tabFun' data-index="4">
+      <text class='{{tabIndex==4?"active":""}}'>其它</text>
+    </view>
+  </view>
+ <!-- 手指拖动的距离，实现scroll-view的拖拽效果 >
+  <view style="height:{{touchMoveHeight}}px;">
+  </view-->
+  
+ 
+   <scroll-view class='list' scroll-y bindscroll="bindscroll" bindtouchstart="touchStart" bindtouchend="touchEnd" bindtouchmove="touchMove">
+ <!--view class="container" style="height:{{touchMoveHeight/2}}px;"-->
+  <view class="loading" wx:if="{{show}}">
+  <view class="dot" animation="{{alpha[0]}}"></view>
+  <view class="dot" animation="{{alpha[1]}}"></view>
+  <view class="dot" animation="{{alpha[2]}}"></view>
+  <view class="dot" animation="{{alpha[3]}}"></view>
+  <view class="dot" animation="{{alpha[4]}}"></view>
+</view>
+<!--/view-->
+      <view class='item' wx:if="{{!isEdit}}" wx:for="{{listcf[tabIndex-1]}}">
+     
+      <navigator class='content' hover-class="none"  url="plugin-private://wx2b03c6e691cd7370/pages/live-player-plugin?room_id={{item.roomid}}">
+        <view class='text' wx:if="{{item.start_YMD==item.end_YMD}}">
+          <view class='title'>{{item.start_YMD}}</view>
+          <view class='title'>{{item.start_hms}} - {{item.end_hms}}</view>
+           
+        </view>
+        <view class='text' wx:else>
+          <view class='title'>{{item.start_YMD}}</view>
+          <view class='title'>{{item.start_hms}}</view>
+           <view class='title'>-</view>
+           <view class='title'>{{item.end_YMD}}</view>
+          <view class='title'>{{item.end_hms}}</view>
+        </view>
+        <image src='{{item.share_img}}' mode="aspectFill" class="share_img"></image>
+        <view class='text' >
+          <view class='name'>{{item.name}}</view>
+          <view class='spec'>{{item.creat_date}}</view>
+          <view class='roomid'>
+            <text>房间号   {{item.roomid}}</text>
+          </view>
+          <view class='anchor_name'>
+            <text>主播   {{item.anchor_name}}</text>
+          </view>
+        </view>
+      </navigator>
+</view>
+
+  </scroll-view>
+  
+</view>
+	

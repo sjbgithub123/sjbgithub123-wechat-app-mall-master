@@ -1,0 +1,269 @@
+.top{
+  height: 30vh;
+ /* border-bottom:6rpx solid #dedede;*/
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://img.redocn.com/sheji/20180322/huanjifuzhuanghaibao_9278011.jpg
+  );
+ }
+ .top .img{
+   width: 160rpx;
+   height:160rpx;
+   overflow: hidden;
+   border-radius: 50%;
+ }
+ 
+ .top .text{
+   text-align: center;
+   font-size:30rpx;
+   color: #333333;
+ }
+ .item{
+   display: flex;
+   line-height: 80rpx;
+   border-bottom: 2rpx solid #dedede;
+   background: #fff;
+   padding: 0 32rpx;
+   justify-content: space-around;
+ }
+
+ .title{
+  display: flex;
+  line-height: 80rpx;
+  border-bottom: 2rpx solid #dedede;
+  background: #fff;
+  padding: 0 32rpx;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+ .item1{
+  display: flex;
+  line-height:70rpx;
+  justify-content:center;
+  border-bottom: 6rpx solid #dedede;
+  background: #fff;
+  padding: 0 32rpx;
+  flex-direction: column;
+border-radius:5%;
+border-top: 6rpx solid #dedede;
+ }
+
+ .item2{
+  display: flex;
+  justify-content:center;
+  border-bottom: 6rpx solid #dedede;
+  background: #fff;
+  padding: 0 32rpx;
+  flex-direction: column;
+border-radius:5%;
+border-top: 6rpx solid #dedede;
+margin-top:30rpx;
+
+}
+
+.item3{
+  display: flex;
+  justify-content:center;
+  border-bottom: 6rpx solid #dedede;
+  background: #fff;
+  padding: 0 32rpx;
+  flex-direction: column;
+border-radius:5%;
+border-top: 6rpx solid #dedede;
+margin-top:30rpx;
+
+}
+.item4{
+  display: flex;
+  justify-content:center;
+  border-bottom: 6rpx solid #dedede;
+  background: #fff;
+  padding: 0 32rpx;
+  flex-direction: column;
+border-radius:5%;
+border-top: 6rpx solid #dedede;
+margin-top:30rpx;
+
+}
+
+ .left1{
+   padding: 20rpx;
+   font-weight: 700;
+   font-size:32rpx;
+  /* border-bottom: 1px solid #dedede;*/
+ }
+ .left2{
+  padding: 20rpx;
+  font-weight: 700;
+  font-size:32rpx;
+  margin-left: -29rpx;
+ /* border-bottom: 1px solid #dedede;*/
+}
+.left3{
+  padding: 20rpx;
+  font-weight: 700;
+  font-size:32rpx;
+  margin-left: 2rpx;
+ /* border-bottom: 1px solid #dedede;*/
+}
+ .item .left{
+   flex: 1 0 50%;
+   font-size:32rpx;
+   color: #333333;
+   font-weight: 700;
+   padding: 20rpx;
+
+   margin-left: -23rpx;
+ }
+ 
+ .item .right{
+   flex: 1 0 50%;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+ }
+ 
+ .item image{
+   width: 20rpx;
+   height:30rpx;
+ }
+ 
+ .item text{
+   font-size:24rpx;
+   color: #999999;
+   padding-right: 10px;
+ }
+ 
+ .icon{
+   border-bottom:2rpx solid #EDEDED; 
+   display: flex;
+   padding:24rpx 0;
+   flex-direction: row;
+   justify-content: space-around;
+   
+ }
+ .icon image{
+   display: block;
+   width:60rpx;
+   height:60rpx;
+   margin: 0 auto;
+   padding-top:20rpx;
+ }
+ .icon text{
+   display: block;
+   text-align: center;
+   width: 100%;
+   font-size:28rpx;
+   color: #333;
+   padding-top: 20rpx;
+ }
+ .icon navigator{
+   flex: 1 0 25%;
+ }
+ .views{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   border-top: 2rpx solid #dedede;
+   padding: 10rpx;
+ }
+
+
+
+
+ .view3{
+display: flex;
+flex-direction: column;
+justify-content:center;
+ }
+ .vipcard{
+  display: flex;
+ 
+flex-direction: row;
+  background: #fff;
+  
+  justify-content:center;
+ }
+ .vipnum{
+text-align: center;
+align-items: center;
+ }
+ .vipname{
+   text-align: start;
+   font-size:30rpx;
+ }
+ .footprints{
+  display: flex;
+ 
+flex-direction: row;
+  background: #fff;
+  
+  justify-content:center;
+ }
+ .history{
+  display: flex;
+ 
+flex-direction: row;
+  background: #fff;
+  
+  justify-content:center;
+ }
+.stowaway{
+  display: flex;
+ 
+flex-direction: row;
+  background: #fff;
+  
+  justify-content:center;
+ }
+ .view1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+   }
+   .remainingsum{
+    display: flex;
+  flex-direction: row;
+    background: #fff;
+    justify-content:center;
+   }
+   .remaining{
+  text-align: center;
+  align-items: center;
+   }
+   .remainingname{
+     text-align: start;
+     font-size: 30rpx;
+   }
+   .view2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     }
+     .tickets{
+      display: flex;
+    flex-direction: row;
+      background: #fff;
+      justify-content:center;
+     }
+     .ticketsnum{
+    text-align:center;
+    align-items: center;
+     }
+     .ticketsname{
+       text-align: start;
+       font-size: 30rpx;
+     }
+     .stowawayname{
+       font-size: 30rpx;
+     }
+     .historyname{
+       font-size: 30rpx;
+     }
+     .footprintsname{
+       font-size: 30rpx;
+     }
+

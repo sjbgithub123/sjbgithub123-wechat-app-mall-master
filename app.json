@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "pages/index/home",
+    "pages/index/classify",
+    
+    "pages/brand/brand",
+    "pages/index/mine",
+    "pages/recharge/index",
+    "pages/index/home0",
+   "pages/orderDetails/index",
+    "pages/index/cart",
+    "pages/index/index",
+    "pages/orderinf/index",
+    "pages/list/index",
+    "pages/cart/index",
+    "pages/user/index",
+    "pages/details/index",
+    "pages/details/order",
+    "pages/details/index0",
+    "pages/bindPhone/index",
+    "pages/coupon/index",
+    "pages/order/index",
+    "pages/index/shopping0",
+    "pages/orderDetails/index2",
+    "pages/live/index"
+   
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "navigateToMiniProgramAppIdList":["wx059cd327295ab444"],
+  "plugins": {
+    "live-player-plugin": {
+        "version": "1.0.18",
+        "provider": "wx2b03c6e691cd7370" 
+    }
+},
+  "tabBar": {
+    "list": [{
+      "pagePath":"pages/index/home",
+      "text": "首页",
+      "iconPath": "/images/home3.png",
+      "selectedIconPath": "/images/home4.png"
+    },{
+      "pagePath":"pages/index/classify",
+      "text": "分类",
+      "iconPath": "/images/classify.png",
+      "selectedIconPath": "/images/classify1.png"
+    },{
+      "pagePath":"pages/index/cart",
+      "text": "购物车",
+      "iconPath": "/images/mall3.png",
+      "selectedIconPath": "/images/mall4.png"
+    },{
+      "pagePath":"pages/index/mine",
+      "text": "我的",
+      "iconPath": "/images/mine3.png",
+      "selectedIconPath": "/images/mine4.png"
+    }]
+  },
+  "sitemapLocation": "sitemap.json"
+}

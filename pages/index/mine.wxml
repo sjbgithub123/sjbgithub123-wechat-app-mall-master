@@ -1,0 +1,149 @@
+<scroll-view scroll-y style='height:100vh;'>
+  <view class='top'>
+    <!-- <navigator url="/pages/bindPhone/index" class='img'>
+      
+    </navigator> -->
+    <view>
+       <view class='img'><open-data type="userAvatarUrl"></open-data></view><view class='text'><open-data type="userNickName"></open-data></view>
+    </view>
+  </view>
+
+ <!--  <navigator url="/pages/order/index" class='item'>
+  <view class='left'>
+      个人资产
+    </view>
+    
+  </navigator>-->
+<view class="item1">
+<view class='left1'>
+      个人资产
+    </view>
+  <view class='views'>
+      <view bindtap="clickview1" class="view1">
+    <view class="remainingsum">
+    <text class="remaining">0.00</text>
+    <text>元</text>
+    </view>
+      <text class="remainingname">我的余额</text>
+    </view>
+      <view bindtap="clickview2" class="view2">
+    <view class="tickets">
+    <text class="ticketsnum">{{couponnum}}</text>
+    <text>张</text>
+    </view>
+      <text class="ticketsname">优惠券</text>
+    </view>
+  <view class="view3">
+    <view class="vipcard">
+    <text class="vipnum">0</text>
+    <text>张</text>
+    </view>
+      <text class="vipname">会员卡</text>
+    </view>
+    
+  </view>
+</view>
+  
+<view class="item2">
+  <navigator url="/pages/order/index" class='item'>
+    <view class='left'>
+      我的订单
+    </view>
+    <view class='right'>
+      <text>查看全部订单</text>
+      <image src='/images/my_order.png'></image>
+    </view>
+  </navigator>
+
+  <view class='icon'>
+    <navigator url="/pages/order/index?type=2" hover-class="none" >
+      <image src='/images/pending_payment.png' mode="aspectFit"></image>
+      <text>待付款</text>
+    </navigator>
+    <navigator url="/pages/order/index?type=3" hover-class="none" >
+      <image src='/images/pending_delivery.png' mode="aspectFit"></image>
+      <text>待发货</text>
+    </navigator>
+    <navigator url="/pages/order/index?type=4" hover-class="none" >
+      <image src='/images/already_shipped.png' mode="aspectFit"></image>
+      <text>已发货</text>
+    </navigator>
+    <navigator url="/pages/order/index?type=5" hover-class="none" >
+      <image src='/images/completed.png' mode="aspectFit"></image>
+      <text>已完成</text>
+    </navigator>
+  </view>
+</view>
+  
+  <view class="item3">
+<view class='left3'>
+    使用记录
+    </view>
+  <view class='views'>
+      <view class="view1">
+    <view class="stowaway">
+    <text class="stowawaynum">0</text>
+    </view>
+      <text class="stowawayname">商品收藏</text>
+    </view>
+      <view bindtap="clickview2" class="view2">
+    <view class="history">
+    <text class="historynum">0</text>
+    </view>
+      <text class="historyname">历史购买</text>
+    </view>
+  <view class="view3">
+    <view class="footprints">
+    <text class="footprintsnum">0</text>
+    </view>
+      <text class="footprintsname">我的足迹</text>
+    </view>
+    
+  </view>
+</view>
+<view class="item4">
+<view class="title">
+  <view class='left2'>
+    我的服务
+    </view></view>
+  <view class='icon'>
+    <navigator url="/pages/order/index?type=1" hover-class="none" >
+      <image src='/images/refund1.png' mode="aspectFit"></image>
+      <text>退款/售后</text>
+    </navigator>
+    <navigator url="/pages/order/index?type=2" hover-class="none" >
+      <image src='/images/fission.png' mode="aspectFit"></image>
+      <text>分销中心</text>
+    </navigator>
+    <navigator url="/pages/live/index" hover-class="none" >
+      <image src='/images/bargain.png' mode="aspectFit"></image>
+      <text>直播</text>
+    </navigator>
+    <navigator url="/pages/order/index?type=4" hover-class="none" >
+      <image src='/images/prize.png' mode="aspectFit"></image>
+      <text>我的奖品</text>
+    </navigator>
+  </view>
+  <view class='icon'>
+    <navigator url="/pages/order/index?type=1" hover-class="none" >
+      <image src='/images/evaluate.png' mode="aspectFit"></image>
+      <text>我的评价</text>
+    </navigator>
+    <navigator url="/pages/order/index?type=2" hover-class="none" >
+      <image src='/images/parlor.png' mode="aspectFit"></image>
+      <text>门店列表</text>
+    </navigator>
+    <navigator url="/pages/order/index?type=3" hover-class="none" >
+      <image src='/images/gift.png' mode="aspectFit"></image>
+      <text>礼物记录</text>
+    </navigator>
+    <navigator url="/pages/order/index?type=4" hover-class="none" >
+      <image src='/images/convert.png' mode="aspectFit"></image>
+      <text>兑换卡中心</text>
+    </navigator>
+  </view>
+</view>
+  
+
+  
+</scroll-view>

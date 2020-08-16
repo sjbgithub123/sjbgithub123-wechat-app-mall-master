@@ -1,0 +1,69 @@
+<!--index.wxml-->
+<!--<loading hidden="{{!loading}}">
+	{{title}}
+</loading>-->
+<view class="container">
+<!--scroll-view   scroll-y="true"  class="page-body" bindscrolltolower="loadMore"-->
+  <!--banner-->
+  <view class="swiper">
+      <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+              autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for-items="{{banner_url}}" wx:key="item.id">
+              <swiper-item>
+                <block wx:if="{{item}}">
+                  <image src="{{item}}"  mode="aspectFill"/>
+                </block>
+                <block wx:else>
+                  <image src="../../images/default_pic.png" mode="aspectFill"></image>
+                </block>
+              </swiper-item>
+          </block>
+      </swiper>
+  </view>
+  <!--nav-->
+  <view class="nav_top">
+    <block wx:for="{{fircategory}}" wx:key="item.id2" >
+      <view class="nav_top_items {{curNavId == item.id2 ? 'active_'+colors[index] : ''}}" bindtap="switchTab" data-index="{{index}}" data-id="{{item.id2}}" >
+        <image src="{{item.img}}" mode="aspectFill"></image>
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+  <!--list-->
+  
+  <view class="nav_section" style="display:flex;flex-direction:column;">
+    <view class="selected">
+        <view class="select-title"><text>精选主题</text></view>
+        <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex" class="select-top">
+            <view class="select-top-small" wx:for="{{seccategory}}">
+                <navigator url="/pages/list/index?id1={{fircategory[curNavId-1].id}}&id2={{item.id}}&brandimg={{item.img}}">
+                    <image mode="heightFix"  src="{{item.img}}"></image>
+                </navigator>
+            </view>
+        </scroll-view>
+        <!--
+        <view class="select-bottom">
+            <navigator url="list/list">
+                <image src="/image/s3.png"></image>
+            </navigator>
+        </view>-->
+      </view>
+      <view class="newest">
+        <view class="newest-title"><text>最近新品</text></view>
+        <view class="newest-box">
+            <view class="newest-list" wx:for="{{newlist1}}">
+                <navigator url="details/details">
+                    <image src="{{item.img}}"></image>
+                    <view class="newest-text"><text>{{item.name}}</text></view>
+                    <view class="newest-text"><text>￥{{item.saleprice}}</text></view>
+                </navigator>
+            </view>
+            
+        </view>
+       </view>
+       
+       </view>
+
+
+<!--/scroll-view-->
+</view>

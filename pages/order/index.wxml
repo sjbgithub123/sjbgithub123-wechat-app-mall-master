@@ -1,0 +1,67 @@
+<view class='main'>
+  
+  <!--view class='tab' >
+    <view bindtap='tabFun' wx:for="{{tablist}}" data-index="{{item.index}}">
+      <text class='{{tabIndex==item.index?"active":""}}'>{{item.name}}</text>
+    </view></view-->
+    <!--水平滚动-->
+<scroll-view scroll-x="true" style=" white-space: nowrap; display: flex" >
+<!--  display: inline-block-->
+  <view class="tab" bindtap='tabFun' wx:for="{{tablist}}" data-index="{{item.index}}">
+      <text class='{{tabIndex==item.index?"active":""}}'>{{item.name}}</text>
+    </view>
+</scroll-view>
+    <!--view bindtap='tabFun' data-index="2">
+      <text class='{{tabIndex==2?"active":""}}'>待发货</text>
+    </view>
+    <view bindtap='tabFun' data-index="3">
+      <text class='{{tabIndex==3?"active":""}}'>已发货</text>
+    </view>
+    <view bindtap='tabFun' data-index="4">
+      <text class='{{tabIndex==4?"active":""}}'>已完成</text>
+    </view-->
+  
+  
+   <scroll-view class='list' scroll-y bindscroll="bindscroll" bindtouchstart="touchStart" bindtouchend="touchEnd" bindtouchmove="touchMove">
+ <!--view class="container" style="height:{{touchMoveHeight/2}}px;"-->
+  <view class="loading" wx:if="{{show}}">
+  <view class="dot" animation="{{alpha[0]}}"></view>
+  <view class="dot" animation="{{alpha[1]}}"></view>
+  <view class="dot" animation="{{alpha[2]}}"></view>
+  <view class="dot" animation="{{alpha[3]}}"></view>
+  <view class="dot" animation="{{alpha[4]}}"></view>
+</view>
+<!--/view-->
+      <view class='item' wx:if="{{!isEdit}}" wx:for="{{list}}">
+     <view class="goods-list">
+      <view class="list-title">商品列表</view>
+      <view class="a-goods" wx:for-items="{{item.goodsdetail.goodslist}}" wx:key="{{index}}">
+        <view class="img-box">
+          <image src="{{item.pic}}" class="img" />
+        </view>
+        <view class="text-box">
+          <view class="arow arow01">
+            <view class="goods-name">{{item.name}}</view>
+            
+            <view class="goods-price">¥ {{item.price}}</view>
+          </view>
+          <view class="arow">
+            <!--view class="goods-label">{{item.label}}</view-->
+            <view class="goods-label" bindtap="selectTap" data-index="{{index}}"><text class='colortext'>{{item.color}}</text><text class='sizetext'>{{item.size}}</text></view>
+            <view class="goods-num">x {{item.number}}</view>
+            
+          </view>
+
+        </view>
+
+      </view>
+      
+        <view style="display:flex;float:right;flex-direction:row">
+          <button style="font-size:30rpx" bindtap="bindCancel">取消订单</button>
+          <button style="font-size:30rpx" type="warn" bindtap="bindPay" data-index="{{index}}">去支付</button></view>
+    </view>
+    
+</view>
+
+  </scroll-view>
+</view>

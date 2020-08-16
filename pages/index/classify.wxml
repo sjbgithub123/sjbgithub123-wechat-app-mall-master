@@ -1,0 +1,180 @@
+<!--pages/home/home.wxml-->
+<view class="classify-class">
+  <view class="header-class">
+    <view bindtap="search" class="header-search">
+      <image src="../../images/search.png"></image>
+      <text>搜索门店商品</text>
+    </view>
+  </view>
+
+  <view class="content-class">
+    <view class="content-contain">
+      <view class="nav-left">
+        <scroll-view  scroll-y="true" style="heigh t: {{deviceHeight*2}}rpx">
+          <block wx:for="{{classifyList}}" wx:key="id">
+            <view class="left-item-{{curNav == item.id ? 'activie' : ''}}" data-index="{{index}}" catchtap="switchLeftTab">{{item.desc}}</view>
+          </block>
+          <view style="height:{{deviceHeight / 5}}rpx"></view>
+        </scroll-view>
+      </view>
+      <view class="nav-right">
+        <scroll-view scroll-y="true" style="height: {{deviceHeight*2}}rpx" scroll-top="{{scrolltop}}">
+          <block wx:for="{{classifyList[curIndex].nodes}}" wx:key="id">
+            <view class="title">
+            <image style="width:50rpx;height:50rpx" mode="aspectFill" src="{{item.brandimg}}"></image>
+            <text class="text">{{item.desc}}</text></view>
+            
+            <view class="classify-item">
+              <block wx:for="{{item.nodes}}" wx:key="id">
+
+   <view class="item" data-id="{{item.id}}" bindtap="todetails">
+      
+                  <image src="{{item.img[0]}}" class="logo" mode="widthFix"></image>
+              <!-- <view class="name">{{item.tree.desc ? item.tree.desc : item.tree.desc2}}</view>
+                  <view class="price">{{item.tree.desc}}</view>
+                  -->
+                
+  
+                <view class="info" hover-class="hoverclass">
+               <!--  <image src="{{item.tree.logo}}" class="logo"></image>--> 
+                  <view class="name">{{item.name}}</view>
+                  <view class='container'>
+                  <view class='view1'>
+                 库存：
+                  </view>
+                  <view class='view2'>
+                  {{item.num}}
+                  </view>
+                  <view class='view3'>
+                 件
+                  </view>
+                 <!-- <view class='view4'>
+                  4
+                  </view>
+                  <view class='view5'>
+                  5
+                  </view>-->
+                  </view>
+                  <view class='container'>
+                 <!--<view class='view1'>
+                  </view>
+                  <view class='view2'>
+                  </view>--> 
+                 <!-- <view class='view3'>
+                  3
+                  </view>
+                  <view class='view4'>
+                  
+                  </view>-->
+                  <view class='view5'>
+                 <text class="saleprice">￥{{item.saleprice}}</text>
+                  </view>
+            <!--     <image src="../../images/Shopping.png"></image>--> 
+            <!--
+<view id="tapTest" data-id='1' bindtap="clickme" class="shop">
+<image src="../../images/Shopping.png"></image>
+</view>-->
+
+<view id="tapTest" data-hi="WeChat" data-img="{{item.img[0]}}" data-price="{{item.saleprice}}" data-id="{{item.id}}" catchtap="clickme" class="shop"> 
+<image class='image1' src="../../images/Shopping.png"></image>
+</view>
+                  </view>
+                 <!-- <view class="price">{{item.tree.price}}</view>
+                  <view class="salesnum">{{item.tree.salesnum}}</view>
+                  -->
+                </view>
+</view>
+              </block>
+            </view>
+          </block>
+
+          
+         <view style="height:{{deviceHeight / 5}}rpx"></view>
+
+
+
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>
+<!--屏幕背景变暗的背景  -->
+  <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+  <!--弹出框  -->
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+    <!--view class='item1'>
+   <cover-image src="" class='orderinf'></cover-image>
+   <view class="item1inf">
+   <text class="price1">￥</text>
+   <text class="price2">{{price}}</text>
+   </view>
+   <image class="close" bindtap="close" src="/images/delete.png"></image>
+  </view-->
+
+  <view class="dialog__container">
+  <view class="row">
+         <image bindtap="close" class="image-close" src="/images/delete.png"></image>
+        <image class="image-sku" src="{{orderinfimg}}" data-src="{{orderinfimg}}" bindtap="previewImage" mode="widthFix"></image>
+        <view class="column">
+        <view style="display:flex;flex-direction:row">
+          <text class="sku-price">￥{{price}}</text> <text class="sku-originprice" style='text-decoration:line-through;'>￥{{originprice}} </text></view>
+          <text class="sku-title">库存:{{currentnum}}件</text>
+         <!--<text class="sku-title">商品编码：1456778788</text>-->  
+        </view>
+      </view>
+
+      <text class="border-line"></text>
+<view class="view">
+      <view class="row">
+      <view style="font-size:32rpx;font-family:Microsoft Yahei;font-weight:bold;margin-left:20rpx;">颜色</view>
+<!--scroll-view scroll-x  style=" white-space: nowrap; display: flex" class="choice">
+  <view class="sign-setting-border {{idx==item.Item_id?'selected':''}}{{item.Item_num==0?'empty':''}}" wx:for="{{sizecategory}}" wx:key="" bindtap='selectApply' data-id="{{item.Item_id}}">{{item.color}}</view></scroll-view-->
+   <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex" class="select-top">
+   <view class="flex" hover-class="none">
+            <view class="sign-setting-border {{idx==item.Item_id?'selected':''}}{{item.Item_num==0?'empty':''}}" wx:for="{{sizecategory}}" wx:key="" bindtap='selectApply' data-id="{{item.Item_id}}">
+                {{item.color}}
+            </view></view>
+        </scroll-view>
+  </view>
+  <text class="border-line"></text>
+      <view class="row">
+      <view style="font-size:32rpx;font-family:Microsoft Yahei;font-weight:bold;margin-left:20rpx;">尺码</view>
+       <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex" class="select-top">
+   <view class="flex" hover-class="none">
+          <view class="sign-setting-border {{idx2==item.Item_id?'selected':''}}{{item.Item_num==0?'empty':''}}" wx:for="{{applyList.size}}" wx:key="" bindtap='selectApply2' data-id="{{item.Item_id}}">{{item.Item_Name}}</view></view>
+        </scroll-view>
+<!--view class="choice">
+  <view class="sign-setting-border {{idx2==item.Item_id?'selected':''}}{{item.Item_num==0?'empty':''}}" wx:for="{{applyList.size}}" wx:key="" bindtap='selectApply2' data-id="{{item.Item_id}}">{{item.Item_Name}}</view></view-->
+  </view>
+  </view>
+    <text class="border-line"></text>
+<view class='item2'>
+    <view class='left2'>
+      购买数量:
+    </view>
+<view class="buy-num">
+<!--<text bindtap="decrease">-</text>
+<text>{{num}}</text>-->
+
+ <view class="jian-btn {{num<=1?'disabled' : ''}}" catchtap="decrease" data-index="{{index}}">-</view>
+<input type="number" confirm-type='确定' value="{{num}}"  bindblur='setNumberInput'  bindconfirm='setNumberInput' data-index="{{index}}"/>
+<!--<text bindtap="increase">+</text>-->
+ <view class="jia-btn {{num>=currentnum? 'disabled' : ''}}" catchtap="increase" data-index="{{index}}">+</view>
+
+</view>
+
+</view>
+
+   <text class="border-line"></text>
+   <view class='item3'>
+    <button class='left3' bindtap="addShopCar">
+     加入购物车
+    </button>
+    <button bindtap="buyNow" class='right3'>
+      <text>立即购买</text>
+    </button></view>
+   </view>
+   <!-- bindtap='specFun' -->
+
+  </view>
+               

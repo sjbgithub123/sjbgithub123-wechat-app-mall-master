@@ -1,0 +1,17 @@
+<view class="main">
+    <view class="banner">
+        <image src="{{brandimg}}"></image>
+    </view>
+
+    <view class="list-box">
+        <view class="newest-list" wx:for="{{goodslist}}">
+            <navigator url="/pages/details/index?id={{item.id}}">
+                <image mode="widthFix" src="{{item.img[0]}}"></image>
+                <view class="newest-text"><text>{{item.name}}</text></view>
+                <view class="newest-text" style="display:flex;flex-direction:row"> <text class="price" >￥{{item.saleprice}}</text>
+  <text style='text-decoration:line-through;'>￥{{item.price}} </text></view>
+            </navigator>
+        </view>
+       
+    </view>
+</view>

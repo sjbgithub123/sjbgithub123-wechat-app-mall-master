@@ -1,0 +1,90 @@
+<!--pages/member/brand/brand.wxml-->
+<view class="box">
+  <view class="b_top">
+    <view class="b_Search">
+      <text class="iconfont iconsousuo" bindtap="search"></text>
+      <input class="b_Search_input dib" bindinput="searchVal"></input>
+    </view>
+  </view>
+  <view class="b_baner">
+    <view wx:if="{{show}}" class="mask" bindtap="Notype"></view>
+    <view wx:if="{{show}}" class="modalDlg">
+      <view class="b_right_top" bindtap="Notype">
+        <text class="b_right_top_fen fr">{{mold}}</text>
+        <text class="iconfont iconshaixuan1"></text>
+      </view>
+      <view class="modalDlg_c">
+        <!-- <view class="modalDlg_c_t Selection">全部</view> -->
+        <block wx:for="{{types}}" wx:key="index">
+          <view class="modalDlg_c_t {{typeId == index ? 'Selection' : ''}}" bindtap="typtTap" data-t="{{index}}">{{item.Name}}</view>
+        </block>
+        <!-- <view class="modalDlg_c_t">化妆品</view>
+        <view class="modalDlg_c_t">精品</view>
+        <view class="modalDlg_c_t">服饰</view>
+        <view class="modalDlg_c_t">运动</view> -->
+        <view class="modalDlg_none"></view>
+        <view class="modalDlg_none"></view>
+      </view>
+    </view>
+    <view class="b_left">
+      <!-- <view class="b_left_text b_left_bf">全部</view> -->
+      <block wx:for="{{foots}}" wx:key="index">
+        <!-- <scroll-view class="b_left_text {{footId == index ? 'b_left_bf' : ''}}" bindtap="footTap" data-F="{{index}}" scroll-x="true" style='width:100%;'>
+          {{item.FloorName}}
+        </scroll-view> -->
+        <view class="b_left_text {{footId == index ? 'b_left_bf' : ''}}" bindtap="footTap" data-F="{{index}}">{{item.FloorName}}</view>
+      </block>
+      <!-- <view class="b_left_text">一楼</view>
+      <view class="b_left_text">二楼</view>
+      <view class="b_left_text">三楼</view>
+      <view class="b_left_text">四楼</view>
+      <view class="b_left_text">五楼</view>
+      <view class="b_left_text">负一</view>
+      <view class="b_left_text">负二</view> -->
+    </view>
+    <view class="b_right">
+      <view class="b_right_top" bindtap="type">
+        <text class="b_right_top_fen fr">{{mold}}</text>
+        <text class="iconfont iconshaixuan1"></text>
+      </view>
+      <block wx:for="{{brands}}" wx:key="index">
+        <view class="b_right_content">
+          <view class="b_right_content_left">
+            <image src="{{item.Logo}}" class="b_r_c_l_i"></image>
+          </view>
+          <view class="b_right_content_right">
+            <view class="b_right_content_right_top">
+              <text class="b_name">{{item.Name}}</text>
+              <text class="b_type fr">{{item.CatalogName}}</text>
+            </view>
+            <view class="b_right_content_right_bottom">
+              <view class="dib">
+                <text class="iconfont iconweizhi"></text>
+                <text class="b_f">{{item.FloorName}}</text>
+              </view>
+              <text class="iconfont icondianhua1 fr {{skinStyle}}-item" bindtap="tel" data-tel="{{item.Phone}}"></text>
+            </view>
+          </view>
+        </view>
+      </block>
+      <!-- <view class="b_right_content">
+        <view class="b_right_content_left">
+          <image src="/res/image/ysld.png" class="b_r_c_l_i"></image>
+        </view>
+        <view class="b_right_content_right">
+          <view class="b_right_content_right_top">
+            <text class="b_name">雅诗兰黛</text>
+            <text class="b_type fr">化妆品</text>
+          </view>
+          <view class="b_right_content_right_bottom">
+            <view class="dib">
+              <text class="iconfont iconweizhi"></text>
+              <text class="b_f">F1 103</text>
+            </view>
+            <text class="iconfont icondianhua1 fr"></text>
+          </view>
+        </view>
+      </view> -->
+    </view>
+  </view>
+</view>
