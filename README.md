@@ -34,18 +34,42 @@
 
 ## 项目布局
 ```
-|-- images               // 公共图片
-|-- lib                  // 公共文件
-|-- pages                // 页面
-|   |-- index            // 首页
-|   |-- list             // 商品列表
-|   |-- details	         // 商品详情
-|   |-- user             // 个人中心
-|   |-- order            // 我的订单
-|   |-- coupon           // 优惠券
-|   |-- cart             // 购物车
-|   |-- addressList      // 我的地址
-|   |-- addressAdd       // 添加地址
+
+├─common
+├─dist
+│  └─packages
+│      └─@minui
+│          ├─wxc-counter
+│          │  └─dist
+│          ├─wxc-icon
+│          │  └─dist
+│          ├─wxc-label
+│          │  └─dist
+│          ├─wxc-loadmore
+│          │  └─dist
+│          └─wxc-price
+│              └─dist
+├─image
+├─images   // 公共图片
+├─lib  // 公共文件
+├─pages   // 页面
+│  ├─bindPhone //暂未用上
+│  ├─brand //暂未用上
+│  ├─cart //暂未用上
+│  ├─coupon // 优惠券
+│  ├─details  //  商品详情 我的订单
+│  ├─index  // 首页 //分类 // 购物车 // 个人中心    // 我的地址  // 添加地址
+│  ├─list              // 商品列表
+│  ├─live //小程序直播
+│  ├─order 订单管理
+│  ├─orderDetails //暂未用上
+│  ├─pic //暂未用上
+│  ├─recharge //暂未用上，充值
+│  └─user //暂未用上
+├─templates
+│  ├─template-cart
+│  └─wxParse
+└─utils
 |-- README.md            // 说明
 ```
 
