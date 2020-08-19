@@ -16,19 +16,21 @@
 
 ### 项目截图:
 ![Image text](https://vircom.top/img/screenshot/index-home.jpg)
-![Image text](https://vircom.top/img/screenshot/index-classify.jpg)
 
+![Image text](https://vircom.top/img/screenshot/index-classify.jpg)
 <img src="https://vircom.top/img/screenshot/index-classify-animation.jpg" width="320px" style="display:inline;">
 <img src="https://vircom.top/img/screenshot/details-order.jpg" width="320px" style="display:inline;">
+
 ![Image text](https://vircom.top/img/screenshot/index-cart.jpg)
+
 ![Image text](https://vircom.top/img/screenshot/Personal-Center.jpg)
 
-<img src="https://vircom.top/img/screenshot/637118f76269ab4420389fbd1107a6c2.jpg" width="320px" style="display:inline;">
-<img src="https://vircom.top/img/screenshot/6d9e23d4f519323babff8367bc6cbb84.jpg" width="320px" style="display:inline;">
-<img src="https://vircom.top/img/screenshot/96f1a8bdeaf99e89daec97c2fe561b28.jpg" width="320px" style="display:inline;">
-<img src="https://vircom.top/img/screenshot/70a7f92554b7064e8d24792f62a9b05f.jpg" width="320px" style="display:inline;">
-<img src="https://vircom.top/img/screenshot/QQ截图20200819154154.png" width="320px" style="display:inline;">
-<img src="https://vircom.top/img/screenshot/QQ截图20200819154221.png" width="320px" style="display:inline;">
+<img src="https://vircom.top/img/screenshot/order-index.jpg" width="320px" style="display:inline;">
+<img src="https://vircom.top/img/screenshot/wechat-address.jpg" width="320px" style="display:inline;">
+<img src="https://vircom.top/img/screenshot/wechat-pay.jpg" width="320px" style="display:inline;">
+<img src="https://vircom.top/img/screenshot/live-index.png" width="320px" style="display:inline;">
+<img src="https://vircom.top/img/screenshot/Broadcast in live broadcasting room.png" width="320px" style="display:inline;">
+<img src="https://vircom.top/img/screenshot/add-address.jpg" width="320px" style="display:inline;">
 <img src="https://vircom.top/img/screenshot/QQ截图20200819154235.png" width="320px" style="display:inline;">
 <img src="https://vircom.top/img/screenshot/QQ截图20200819154254.png" width="320px" style="display:inline;">
 <img src="https://vircom.top/img/screenshot/QQ截图20200819154445.png" width="320px" style="display:inline;">
