@@ -32,20 +32,6 @@
 <img src="https://vircom.top/img/screenshot/Broadcast in live broadcasting room.png" width="320px" style="display:inline;">
 
 
-<img src="https://vircom.top/img/screenshot/QQ截图20200819154254.png" width="320px" style="display:inline;">
-<img src="https://vircom.top/img/screenshot/QQ截图20200819154445.png" width="320px" style="display:inline;">
-<img src="https://vircom.top/img/screenshot/QQ截图20200819154712.png" width="320px" style="display:inline;">
-<img src="https://vircom.top/img/screenshot/QQ截图20200819154731.png" width="320px" style="display:inline;">
-<img src="https://vircom.top/img/screenshot/QQ截图20200819154742.png" width="320px" style="display:inline;">
-<img src="https://vircom.top/img/screenshot/QQ截图20200819154841.png" width="320px" style="display:inline;">
-<img src="https://vircom.top/img/screenshot/QQ截图20200819154911.png" width="320px" style="display:inline;">
-<img src="https://vircom.top/img/screenshot/QQ截图20200819154921.png" width="320px" style="display:inline;">
-<img src="https://vircom.top/img/screenshot/a457a6e77c90c109d014c1f04ea6c986.jpg" width="320px" style="display:inline;">
-<img src="https://vircom.top/img/screenshot/bb1602b8ee2755a11c6cc0604ae7f3e6.jpg" width="320px" style="display:inline;">
-<img src="https://vircom.top/img/screenshot/d15bf43c7b4315bc1f53599276beb2b8.jpg" width="320px" style="display:inline;">
-<img src="https://vircom.top/img/screenshot/fe8c81029c252f3466c40ec8fa9feafc.jpg" width="320px" style="display:inline;">
-
-
 ## 项目布局
 ```
 |-- images               // 公共图片
