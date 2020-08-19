@@ -19,7 +19,7 @@
 ![Image text](https://vircom.top/img/screenshot/index-classify.jpg)
 
 <img src="https://vircom.top/img/screenshot/index-classify-animation.jpg" width="320px" style="display:inline;">
-<img src="https://vircom.top/img/screenshot/details-order" width="320px" style="display:inline;">
+<img src="https://vircom.top/img/screenshot/details-order.jpg" width="320px" style="display:inline;">
 ![Image text](https://vircom.top/img/screenshot/index-cart.jpg)
 ![Image text](https://vircom.top/img/screenshot/Personal-Center.jpg)
 
